@@ -4,6 +4,7 @@ import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.setValue
+import com.outerspace.compose_animations.ui.theme.Point
 
 @Stable     // @Stable tells Compose that this object might change, and when it changes the Compose runtime will be notified
 class CoordinatesState (
@@ -16,6 +17,11 @@ class CoordinatesState (
     fun moveTo(moveToX: Int, moveToY:Int) {
         x = moveToX
         y = moveToY
+    }
+
+    fun moveTo(point: Point) {
+        x = point.x
+        y = point.y
     }
 }
 
