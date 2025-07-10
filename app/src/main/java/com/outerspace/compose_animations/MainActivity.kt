@@ -99,8 +99,10 @@ fun AnimateElementPosition(mainVM: MainViewModel, modifier: Modifier = Modifier)
             xMax = (it.width.toInt() / density.density.toFloat()).toInt() - smileySize
                                                                                                  },
             ) {
-            Image(painterResource(R.drawable.smiley), contentDescription = "Smiley", modifier = Modifier.requiredSize(smileySize.dp).offset(x = btnAState.x.dp, y = btnAState.y.dp))
-            Image(painterResource(R.drawable.smiley), contentDescription = "Smiley", modifier = Modifier.requiredSize(smileySize.dp).offset(x = offset.x.dp, y = offset.y.dp))
+            Image(painterResource(R.drawable.smiley), contentDescription = "Smiley",
+                modifier = Modifier.requiredSize(smileySize.dp).offset(x = btnAState.x.dp, y = btnAState.y.dp))
+            Image(painterResource(R.drawable.smiley), contentDescription = "Smiley",
+                modifier = Modifier.requiredSize(smileySize.dp).offset(x = offset.x.dp, y = offset.y.dp))
         }
     }
 }
